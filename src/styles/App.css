@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+  font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Mono", "Source Code Pro", "Fira Mono",
+    "Droid Sans Mono", "Consolas", "Courier New", monospace;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+body {
+  padding-block-start: 70px;
+  background-color: #000000;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 50%;
+  padding-block: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  background-color: #000000;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  padding: 5px 15px;
+  height: 45px;
+  width: 80px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-logo:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.logo-text {
+  fill: white;
+  transition: fill 0.3s ease;
+}
+
+.navbar-logo:hover .logo-text {
+  fill: #f4f4f4;
+}
+
+.navbar-inner {
+  backdrop-filter: blur(16px);
+  background-color: rgba(232, 229, 228, 0.5);
+  border-radius: 100px;
+  opacity: 1;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5px;
+  gap: 10px;
+  height: 45px;
+  align-items: center;
+}
+
+.navbar-element {
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-element:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar-element.active {
+  background-color: #000;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a202c;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  color: #e2e8f0;
+}
+.hero-content p {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-unit-heading {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #f4f4f4;
+}
+
+@media (min-width: 768px) {
+  .hero-unit-heading {
+    font-size: 6rem;
+  }
+}
+
+.scrambled-text {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #a0aec0;
+}
+
+.about-section {
+  padding: 2rem 2rem;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  color: #e2e8f0;
+  margin-bottom: 1.5rem;
+}
+
+.about-title-scrambled {
+  font-size: 2.5rem;
+  color: #e2e8f0;
+  margin-bottom: 1.5rem;
+}
+
+.about-text {
+  font-size: 1.2rem;
+  color: #e2e8f0;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.skills {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #e2e8f0;
+  margin-bottom: 1.5rem;
+}
+
+.tech-stack {
+  display: grid;
+  grid-template-columns: repeat(4, 150px);
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 1rem 0;
+  max-width: 700px;
+}
+
+.skill-card {
+  position: relative;
+  width: 150px;
+  height: 80px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: solid 1px #fff;
+}
+
+.skill-card:hover {
+  border: solid 1px #d3d3d3;
+}
+
+.skill-card canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.skill-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.skill-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.cta {
+  padding: 0.75rem 1.5rem;
+  margin-top: 3rem;
+  font-size: 1.25rem;
+  color: #fff;
+  border: solid 1px #fff;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta:hover {
+  color: #000;
+  background-color: #fff;
+}
