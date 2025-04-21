@@ -74,7 +74,6 @@ const Hero = ({ heroRef, aboutRef, skillsRef }) => {
         <div className="tech-stack" ref={skillsRef}>
           {renderSkills()}
         </div>
-        {/* <button className="cta">View My Work</button> */}
       </div>
     </div>
   );
