@@ -6,14 +6,11 @@ import PixelCard from "./PixelCard";
 const Hero = ({ heroRef, aboutRef, skillsRef }) => {
   const [isVisible, setIsVisible] = useState(false);
   const skills = [
-    "React",
-    "Node.js",
-    "MongoDB",
-    "Express",
-    "HTML",
-    "CSS",
+    "Java",
     "Typescript",
+    "React",
     "Tailwind CSS",
+    "Python",
   ];
 
   useEffect(() => {
@@ -45,7 +42,7 @@ const Hero = ({ heroRef, aboutRef, skillsRef }) => {
           encryptedClassName="scrambled-text"
           animateOn="view"
         />
-        <p>Full-Stack Developer | MERN Stack</p>
+        <p>Software Development Engineer | Amazon</p>
         <section className="about-section" ref={aboutRef}>
           <DecryptedText
             text="About Me"
@@ -60,14 +57,12 @@ const Hero = ({ heroRef, aboutRef, skillsRef }) => {
             animateOn="view"
           />
           <p className="about-text">
-            Hey there! I’m Varun, a Full Stack Developer who loves turning ideas
-            into seamless, pixel-perfect web apps. I thrive on building dynamic
-            platforms using the MERN stack and crafting intuitive UIs with React
-            and Tailwind CSS. Coding is my playground, where I experiment with
-            animations, APIs, and databases to create tools that make life
-            easier and more fun. When I’m not coding, you’ll find me playing
-            video games or planning my next big project. Let’s build something
-            amazing together!
+            Hey there! I'm Varun, a Software Development Engineer at Amazon
+            where I work on testing and validating automated fulfillment systems
+            and building AI-powered tools that analyze operational metrics. I
+            enjoy solving complex problems across the full stack with Java,
+            TypeScript, and React. When I'm not coding, you'll find me playing
+            video games or traveling to explore new places. Let's connect!
           </p>
         </section>
         <h2 className="skills">Skills</h2>

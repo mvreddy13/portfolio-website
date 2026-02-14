@@ -9,6 +9,7 @@ function App() {
   const heroRef = useRef(null);
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
+  const contactRef = useRef(null);
 
   return (
     <>
@@ -24,13 +25,13 @@ function App() {
           disableRotation={false}
         />
         <div className="App">
-          <Navbar heroRef={heroRef} aboutRef={aboutRef} skillsRef={skillsRef} />
+          <Navbar heroRef={heroRef} aboutRef={aboutRef} skillsRef={skillsRef} contactRef={contactRef} />
           <main>
             <Hero heroRef={heroRef} aboutRef={aboutRef} skillsRef={skillsRef} />
           </main>
         </div>
       </div>
-      <Footer />
+      <Footer contactRef={contactRef} />
     </>
   );
 }

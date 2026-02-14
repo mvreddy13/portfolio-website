@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-export default function NavBar({ heroRef, aboutRef, skillsRef }) {
+export default function NavBar({ heroRef, aboutRef, skillsRef, contactRef }) {
   const handleClick = (section) => {
     document.querySelectorAll(".navbar-element").forEach((el) => {
       el.classList.remove("active");
@@ -20,8 +20,8 @@ export default function NavBar({ heroRef, aboutRef, skillsRef }) {
     if (section === "about" && aboutRef.current) {
       aboutRef.current.scrollIntoView({ behavior: "smooth" });
     }
-    if (section === "contact" && skillsRef.current) {
-      skillsRef.current.scrollIntoView({ behavior: "smooth" });
+    if (section === "contact" && contactRef.current) {
+      contactRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -72,6 +72,14 @@ export default function NavBar({ heroRef, aboutRef, skillsRef }) {
             >
               Contact
             </a>
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="navbar-element"
+            >
+              Resume
+            </a>
           </div>
         </div>
       </div>
@@ -85,5 +93,7 @@ NavBar.propTypes = {
   aboutRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) })
     .isRequired,
   skillsRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) })
+    .isRequired,
+  contactRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) })
     .isRequired,
 };
